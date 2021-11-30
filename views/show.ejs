@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta hhtp-equiv="X-UA-Compatible" content="IE-Change">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Details</title>
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    </head>
+    <body>
+    <h1> Detailed information about <%= name.id %> </h1>
+    <div class="card">
+        <div class="card-content">
+          <div class="content" style=background-color: <%= name.Color %> >
+            <%= a %>
+            <%= name.Firstname %>
+            <%= name.Lastname %>
+            <%= name.Gender %>
+            <%= myfuncs.convertDate(name.Birthdate) %>
+            <%= name.Country %>
+            <%= name.Company %>
+            <%= myfuncs.getEmail(name.Firstname, name.Lastname, name.Company)%>
+            <%= myfuncs.hexUpper(name.Color) %>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

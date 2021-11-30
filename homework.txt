@@ -1,0 +1,45 @@
+Kodutöö Node.JS ja JSON
+Due November 27, 2021 11:59 PM
+Instructions
+Järjekordselt on vaja lugeda faili sisu ja näidata seda veebilehel tabelina.
+Endiselt kasutama Node.JS Express veebiserverit.
+
+Soovitan tutvuda JSON faili sisuga, et saada ettekujutus mis ees ootab ja kas
+andmed on ikka "korralikud". Teada on, et osadel isikute on Company ja/või
+Color puudu. Lisaks on osadel isikutel Color veidralt sisestatud. Ei, need pole
+minu poolt nii sisestatud vaid süsteem on need nii teinud. Info on genereeritud
+aadressil https://www.onlinedatagenerator.com/
+
+Info on vaja tabeli kujul näidata veebilehel. Originaal JSON faili käsitsi ei muudaks!
+Vähemalt esialgu. Lisaks tuleb teha alljärgnevat:
+
+1. Tabel peab olema eelsorteeritud Lastname või Country järgi kasvavalt.
+   Valik on sinu! Kui suudad tekitada olukorra, et kasutaja saab valida (Browseris),
+   kumma järgi sorteerida seda parem! Kohustust pole!
+2. Kui mingit infot pole (Company ja/või Color), siis jääb tabeli lahter tühjaks.
+3. Kui mingi info on kohati veider (nagu Color), siis tabelis peab näitama
+   korrektselt.
+4. ID veergu tabelis ei näita, kuid järjekorra numbrit küll.
+5. Igale isikule tuleb teha emaili aadress, kui on Company olemas. See on
+   kujul "eesnimi.perenimi@company.com" Kui Company nimi sisaldab tühikut, siis
+   domeeninimi on kuni esimese tühikuni. Näiteks "It Smart Group" on "it.com"
+   Kõik aadressid on .com lõpuga. Kogu aadress on väikeste tähtedega.
+   Kui soovid võid .com (ameerika) asemel kasutada ka Country reaalset koodi.
+   See vajab lisa tööd ja pole kohustuslik!
+6. Lahter kus näidatakse värvi HEX koodi (kui on), siis selle lahtri taustavärv on
+   seda värvi, mis on värvi kood. Värvi kood näidatakse korrekstelt (vt. punkt 3)
+   ning tähed peavad olema trükitähtedena. Osadel see pole! Tekst näidatakse musta
+   värvina. Kui taust ja tekst on samad, siis midagi muutma ei hakka.
+7. Sünniaega näita tabelis kujul DD.MM.YYYY. Originaal on M/D/YYYY
+   NB! DD => 01 ja D => 1
+8. Kui isikul on korrektne info olemas (ID kuni Color), siis saab seda isikut klikkida ja lehel näidatakse kogu selle isiku info. 
+   Faili nimi kus infot näidatakse on show.ejs või details.ejs. Kumb rohkem
+   meeldib :)
+9. CSS stiilid kasutusele (Bulma, Bootstrap vms) 
+
+Valmis projekt ilma node_modules kaustata GItHubi ja siia link kui valmis.
+
+
+Tähtaeg 2 päeva enne järgmist sessi!
+
+Parandus 12.11.2021 @12:40 - JSON fail on parandatud, sest polnud korrektne siiski! Kõik Color väärtused on nüüd korrektsed. Nüüd on kas tühi või 7 märki pikk string!

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta hhtp-equiv="X-UA-Compatible" content="IE-Change">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabel</title>
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    </head>
+    <body>
+        <h1 class="title">Tabel</h1>
+        
+        <table id="example" class="display" style="width:100%">
+            <thead>
+            <!-- HEADING FORMATION -->
+                <tr>
+                    <th>See more</th>
+                    <th>#</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Gender</th>
+                    <th>Birthdate</th>
+                    <th>Country</th>
+                    <th>Company</th>
+                    <th>E-mail</th>
+                    <th>Color</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% let a = 1 %>
+                <% for(let name of names) { %>  
+                <tr>
+                    <td><%= myfuncs.showDetails(name.Firstname, name.Company, name.Color)%> <a href="/views/<%= name.id %>">details</a></td>
+                    <td><%= a %></td>
+                    <td><%= name.Firstname %> </td>
+                    <td><%= name.Lastname %> </td>
+                    <td><%= name.Gender %> </td>
+                    <td><%= myfuncs.convertDate(name.Birthdate) %> </td>
+                    <td><%= name.Country %> </td>
+                    <td><%= name.Company %> </td>
+                    <td><%= myfuncs.getEmail(name.Firstname, name.Lastname, name.Company)%></td>
+                    <td style=background-color:<%= name.Color %> ><%= myfuncs.hexUpper(name.Color) %> </td>
+                </tr>
+                <% a+= 1 %> 
+                <% } %>
+            </tbody>
+            
+        </table>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $('#example').DataTable( {
+            order: [[ 3, 'asc' ], [ 0, 'asc' ]]
+            } );
+          } );
+        </script>
+    </body>
+</html>
+

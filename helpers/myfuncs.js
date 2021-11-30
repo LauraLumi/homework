@@ -19,7 +19,7 @@ function mergeName(fname, lname) {
 function getEmail(fname, lname, company) {
   let compName = company.split(' ')
   if (company.length != 0) {
-    return fname + '.' + lname + '@' + compName[0] + '.com'
+    return fname + '.' + lname + '@' + compName[0]+ '.com'
   } else {
     return 'no company - no e-mail'
   }

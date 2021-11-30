@@ -41,7 +41,7 @@
                     <td><%= myfuncs.convertDate(name.Birthdate) %> </td>
                     <td><%= name.Country %> </td>
                     <td><%= name.Company %> </td>
-                    <td><%= myfuncs.getEmail(name.Firstname, name.Lastname, name.Company)%></td>
+                    <td><%= myfuncs.getEmail(name.Firstname, name.Lastname, name.Company).toLowerCase()%></td>
                     <td style=background-color:<%= name.Color %> ><%= myfuncs.hexUpper(name.Color) %> </td>
                 </tr>
                 <% a+= 1 %> 
